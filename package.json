@@ -1,0 +1,35 @@
+{
+  "name": "@geekie/irt",
+  "version": "0.0.0",
+  "description": "IRT tools in JavaScript",
+  "repository": "geekie/irt-js",
+  "license": "MIT",
+  "main": "dist/irt.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "irt"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0-rc.1",
+    "@babel/plugin-transform-block-scoping": "^7.0.0-rc.1",
+    "@babel/plugin-transform-destructuring": "^7.0.0-rc.1",
+    "@babel/preset-flow": "^7.0.0-rc.1",
+    "babel-eslint": "^8.2.6",
+    "codecov": "^3.0.4",
+    "eslint": "^5.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "flow-bin": "^0.78.0",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "rollup": "^0.64.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build && cp src/irt.js.flow dist/"
+  }
+}

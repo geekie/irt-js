@@ -1,0 +1,13 @@
+// @flow
+
+type Zeta = $Exact<{ a: number, b: number, c: number }>;
+
+declare export function estimateAbilityEAP(
+  answers: Array<0 | 1>,
+  zeta: Array<Zeta>
+): number;
+declare export function information(
+  zeta: Zeta | Array<Zeta>,
+  theta: number
+): number;
+declare export function itemResponseFunction(zeta: Zeta, theta: number): number;

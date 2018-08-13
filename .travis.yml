@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - 6
+  - 8
+  - node
+cache:
+  yarn: true
+  directories:
+    - node_modules
+env:
+  - JOB=test
+matrix:
+  include:
+    - node_js: node
+      env: JOB=check
+script:
+  - |
+    if [ "${JOB}" = "test" ]; then
+      jest --coverage
+      codecov
+    fi
+  - |
+    if [ "${JOB}" = "check" ]; then
+      prettier --list-different README.md
+      flow check
+    fi
